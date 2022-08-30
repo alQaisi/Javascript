@@ -9,7 +9,7 @@ async function getData1(){
     const [users,posts,comments]=await Promise.all(urls.map(url=>fetch(url).then(res=>res.json())));
     console.log("getData1",{users,posts,comments});
 }
-getData1();
+// getData1();
 
 async function getData2(){
     const [users,posts,comments]=await Promise.all(urls.map(async url=>{
@@ -18,7 +18,7 @@ async function getData2(){
     }));
     console.log("getData2",{users,posts,comments});
 }
-getData2();
+// getData2();
 
 async function getData3(){
     const users=await fetch(usersUrl).then(res=>res.json());
@@ -26,7 +26,7 @@ async function getData3(){
     const comments=await fetch(commentsUrl).then(res=>res.json());
     console.log("getData3",{users,posts,comments});
 }
-getData3();
+// getData3();
 
 function myPromise(item,delay){
     const newPromise=new Promise((res,rej)=>{
@@ -56,6 +56,34 @@ async function sequence(){
     return `sequence is done ${one} ${two} ${three}`;
 }
 
-sequence().then(console.log);
-parallel().then(console.log);
-race().then(console.log);
+// sequence().then(console.log);
+// parallel().then(console.log);
+// race().then(console.log);
+
+
+// Handle Error in Promises & Async functions
+
+Promise.
+    reject("aef").
+    then(console.log).
+    catch(()=>console.log("Opps !"));
+
+Promise.
+    resolve("Testing nested promises")
+    .then(response=>{
+        Promise.resolve().then(()=>{
+            throw new Error("Nested Promise Error")
+        }).catch(console.log);
+        return "Response :)"
+    })
+    .then(response=>console.log(response))
+    .catch(err=>console.log("err",err));
+
+async function handleAwaitErrors(){
+    try{
+        await Promise.reject("error")
+    }catch(err){
+        console.log("Caught it !");
+    }
+}
+handleAwaitErrors();
