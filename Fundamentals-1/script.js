@@ -116,3 +116,16 @@ console.log(ageAhmad>ageMohammad);
 console.log(ageMohammad>=18);
 
 const isFullAge=ageMohammad>=18;
+
+// Operator Precedence
+
+console.log(now-1991>now-2018) //  subtraction happens before the comparison operator
+
+console.log(25-10-5);
+
+let y;
+x=y=25-10-5;
+console.log(x,y);
+
+const avgAge=(ageAhmad+ageMohammad)/2
+console.log(ageAhmad,ageMohammad,avgAge);
