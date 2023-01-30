@@ -89,3 +89,30 @@ Let vs Var vs Const
 - Both Let & Var can store a vairable and change it or re-assign it
 
 */
+
+// Operators
+
+const now=2037;
+const ageAhmad=now-1999;
+const ageMohammad=now-2018;
+console.log(ageAhmad,ageMohammad);
+console.log(ageAhmad*2,ageAhmad/10,2**3)
+
+const firstName2="Ahmad";
+const lastName2="Alqaisi";
+const fullName=`${firstName2} ${lastName2}`;//(firstName2+" "+lastName2)
+console.log(fullName);
+
+let x=10+5;
+x+=10; // x=x+10;
+x*=4; // x=x*4;
+x++; // x=x+1;
+++x; // x=x+1; immediately change
+
+
+// Comparison Operators
+
+console.log(ageAhmad>ageMohammad);
+console.log(ageMohammad>=18);
+
+const isFullAge=ageMohammad>=18;
