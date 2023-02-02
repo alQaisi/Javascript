@@ -129,3 +129,25 @@ console.log(x,y);
 
 const avgAge=(ageAhmad+ageMohammad)/2
 console.log(ageAhmad,ageMohammad,avgAge);
+
+
+// String & Template Literals
+
+const firstName3="Ahmad";
+const job="Programmer";
+const birthYear=1999;
+const year2=2037;
+
+const ahmad="I'm "+firstName2+', a '+(year2-birthYear)+" years old " +job+"!";
+console.log(ahmad);
+
+const ahmadNew=`I'm ${firstName2}, a ${year2-birthYear} years old ${job}!`;
+console.log(ahmadNew);
+
+console.log("String with \n\
+emultiple\n\
+lines");
+
+console.log(`String with
+multiple lines
+`)
