@@ -228,3 +228,83 @@ if(height){
 }else{
     console.log('Height is UNDEFINED');
 }
+
+// Equality Operators == vs. === && Boolean Logic
+
+const age2=18;
+
+if(age2===18)
+    console.log("You just became an adult");
+console.log(age2=="18");
+
+console.log(0=="");
+console.log(0==="");
+console.log(0=="0");
+console.log(0==="0");
+
+const hasDriverLicense=true;
+const hasGoodVision=true;
+
+console.log(hasDriverLicense && hasDriverLicense);
+console.log(hasDriverLicense || hasGoodVision);
+console.log(!hasDriverLicense);
+
+if(hasDriverLicense && hasGoodVision){
+    console.log("You are able to drive!");
+}else{
+    console.log("Someone else should drive");
+}
+
+const isTired=false;
+console.log(hasDriverLicense || hasGoodVision || isTired);
+
+if(hasDriverLicense && hasGoodVision && !isTired){
+    console.log("You are able to drive!");
+}else{
+    console.log("Someone else should drive");
+}
+
+hasDriverLicense && hasGoodVision && !isTired?console.log("You are able to drive!"):console.log("Someone else should drive");
+
+// Switch Statement
+
+const day="sunday";
+
+switch(day){
+    case 'sunday':
+    case "monday":
+        console.log('Plan course structure');
+        console.log("Go to coding meetup");
+        break;
+    case "tuesday":
+        console.log("Prepare theory videos");
+        break;
+    case 'wednesdy':
+    case "thursday":
+        console.log("Write code examples");
+        break;
+    case "friday":
+    case "saturday":
+        console.log('Enjoy the weekend :D');
+        break;
+    default:
+        console.log("Not a valid day!");
+}
+
+// Statements & Expressions
+
+/*
+
+Expression: an expression is a piece of code that produces a value. ex: 3+4 is an expression.
+----------- any number by itself is an expreesion.
+            - (true && false && ! false) is an expression because, at the end it will produce a boolean value
+
+
+Statement: statement is a bigger piece of code that is executed and does not produce a value on itself.
+---------- 
+
+if(23>10){
+    const str='23 is bigger';
+}// this is a statement which does not produce a value
+
+*/
