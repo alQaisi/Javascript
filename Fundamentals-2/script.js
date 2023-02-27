@@ -76,3 +76,25 @@ we can use arrow functions in the form of function expression but we cant use th
 
 */
 
+// Arrow Functions
+
+/*
+
+Arrow Function: is a special form of function expression that is shorter and therefore faster to write
+---------------
+
+Arrow functions do not get a so-called "this" keyword
+
+*/
+
+const calcAge3=(birthYear)=>2023-birthYear; // If we don't use curly braces in arrow function then the return actually happens implicitly but we must return an expression
+
+const yearsUntilRetirement=birthYear=>{
+    const age=2023-birthYear;
+    const retirement=60-age;
+    return retirement;
+}
+console.log(yearsUntilRetirement(1999));
+
+const fib=(num)=>num<=1?num:fib(num-1)+fib(num-2);
+console.log(fib(10))
