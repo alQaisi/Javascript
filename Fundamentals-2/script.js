@@ -31,6 +31,10 @@ if(hasDriversLicense)
 
     Parameters: parameters are like variables that are specific only to this function and 
     ----------- they will get defined once we call the function, they represent the input data of the function.
+                function parameters are the names listed in the function's definition
+
+    Arguments: function arguments are the real values passed to the function.(Parameters are initialized to the values of the arguments supplied)
+    ----------
 
 */
 
@@ -98,3 +102,6 @@ console.log(yearsUntilRetirement(1999));
 
 const fib=(num)=>num<=1?num:fib(num-1)+fib(num-2);
 console.log(fib(10))
+
+// Functions calling other functions
+
