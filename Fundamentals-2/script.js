@@ -48,3 +48,31 @@ function frituProcessor(apples,oranges){
 }
 const myJuice=frituProcessor(5,7);
 console.log(frituProcessor(5,4));
+
+// Function Declarations VS. Expressions
+
+const age3=calcAge1(1999);
+// const age4=calcAge2(1999); Reference error
+
+function calcAge1(birthYear){ // this is a function declaration
+    const age=2023-birthYear;
+    return age;
+}
+const age1=calcAge1(1999);
+
+const calcAge2=function(birthYear){ // this is a function expression (expression produces a value) or an anonymous function, it's just a variable that holds a function
+    return 2023-birthYear;
+}
+const age2=calcAge2(1999);
+
+console.log(age1,age2);
+
+/*
+
+The main practical difference between function declaration and function expression is that we can actually call
+function declaration before they are defined in the code (hoisting)
+
+we can use arrow functions in the form of function expression but we cant use them in function declaration
+
+*/
+
