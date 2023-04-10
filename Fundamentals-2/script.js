@@ -105,3 +105,70 @@ console.log(fib(10))
 
 // Functions calling other functions
 
+// Arrays -- START
+
+/*
+    Array: array is one of javascript data structures, it is like a big container
+    ------ into which we can throw variables and then later refrence them.
+*/
+
+const friends=['Michael','Steven','Peter'];
+console.log(friends);
+
+const years=new Array(1991,1984,2008,2020);
+
+console.log(friends[0]);
+console.log(friends[1]);
+console.log(friends.length);// the exact size of the array (how many elements in the array)
+console.log(friends[friends.length-1]);
+
+friends[2]='Jay';
+console.log(friends);
+
+const ahmad=["Ahmad","Alqaisi",2023-1999,"Programmer",friends];
+console.log(ahmad);
+
+// Javascript has some built-in functions that we can apply directly on arrays, And these are called methods
+
+
+    /*  Array Methods:
+
+        1-push: adds elements to the end of an array // it returns the new length of the array
+        -------
+
+        2-unshift: adds elements to the beginning of an array // it returns the new length of the array
+        ----------
+
+        3-pop: removes elements from the end of an array // it returns the deleted element
+        ------
+
+        4-shift: removes elements from the beginning of an array // it returns the deleted element
+        --------
+
+        5-indexOf: returns the index of a specific element // it returns -1 if the elements does not exist
+        ----------
+
+        6-includes: returns a boolean that indicates if a specific element does exist in an array
+        -----------
+
+    */
+
+friends.push("Osama"); // if we console.log this line it will return the new length of the array
+console.log(friends);
+
+const newLength=friends.unshift("Mohammad");
+console.log(newLength,friends);
+
+console.log(friends.pop());
+console.log(friends);
+
+console.log(friends.shift());
+console.log(friends);
+
+console.log(friends.indexOf("Jay"));
+console.log(friends.indexOf("ahmad"));
+
+console.log(friends.includes("ahmad"));
+console.log(friends.includes("Michael"));
+
+// Arrays -- END
